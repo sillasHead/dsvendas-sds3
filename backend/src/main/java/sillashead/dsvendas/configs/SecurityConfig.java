@@ -1,4 +1,4 @@
-package sillashead.dsvendas.config;
+package sillashead.dsvendas.configs;
 
 import java.util.Arrays;
 
