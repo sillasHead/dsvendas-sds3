@@ -4,7 +4,7 @@ import DonutChart from 'components/donut-chart';
 import Footer from 'components/footer';
 import Navbar from 'components/navbar';
 
-export default function DashBoard() {
+export default function Dashboard() {
   return (
     <>
       <Navbar />

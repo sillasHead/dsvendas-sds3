@@ -1,4 +1,4 @@
-import DashBoard from 'pages/dash-board';
+import Dashboard from 'pages/dashboard';
 import Home from 'pages/home';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
@@ -9,8 +9,8 @@ export default function Routes() {
         <Route path="/" exact>
           <Home />
         </Route>
-        <Route path="/dash-board" exact>
-          <DashBoard />
+        <Route path="/dashboard" exact>
+          <Dashboard />
         </Route>
       </Switch>
     </BrowserRouter>
