@@ -18,7 +18,6 @@ export default function Dashboard() {
           </div>
           <div className="col-sm-6">
             <h5 className="text-center text-secondary">Taxa de sucesso (%)</h5>
-            <BarChart />
             <DonutChart />
           </div>
         </div>
