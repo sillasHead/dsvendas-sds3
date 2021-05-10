@@ -1,12 +1,10 @@
 package sillashead.dsvendas.services;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import sillashead.dsvendas.dto.SaleDTO;
 import sillashead.dsvendas.dto.SaleSuccessDTO;
 import sillashead.dsvendas.dto.SaleSumDTO;
+import sillashead.dsvendas.entities.Sale;
 import sillashead.dsvendas.repositories.SaleRepository;
 import sillashead.dsvendas.repositories.SellerRepository;
 
@@ -36,11 +35,10 @@ public class SaleService {
         sellerRepository.findAll(); 
         //§ trazer os vendedores em memoria para a jpa armazena-los cache para quando 
         //a busca das vendas que dependem dos vendedores, eles ja estarao em memoria
-        List<SaleDTO> sales = new ArrayList<>();
-        repository.findAll(pageable).forEach(sale -> 
-            sales.add(modelMapper.map(sale, SaleDTO.class))
+        Page<Sale> sales = repository.findAll(pageable);
+        return sales.map(sale -> 
+            modelMapper.map(sale, SaleDTO.class)
         );
-        return new PageImpl<>(sales);
     }
 
     @Transactional(readOnly = true)
