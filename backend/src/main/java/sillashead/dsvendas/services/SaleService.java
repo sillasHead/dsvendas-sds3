@@ -12,6 +12,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import sillashead.dsvendas.dto.SaleDTO;
+import sillashead.dsvendas.dto.SaleSuccessDTO;
+import sillashead.dsvendas.dto.SaleSumDTO;
 import sillashead.dsvendas.repositories.SaleRepository;
 import sillashead.dsvendas.repositories.SellerRepository;
 
@@ -39,5 +41,15 @@ public class SaleService {
             sales.add(modelMapper.map(sale, SaleDTO.class))
         );
         return new PageImpl<>(sales);
+    }
+
+    @Transactional(readOnly = true)
+    public List<SaleSumDTO> amountGroupedBySeller() {
+        return repository.amountGroupedBySeller();
+    }
+
+    @Transactional(readOnly = true)
+    public List<SaleSuccessDTO> successGroupedBySeller() {
+        return repository.successGroupedBySeller();
     }
 }
