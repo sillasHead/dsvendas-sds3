@@ -2,11 +2,7 @@
 
 Projeto com fins educativos, instruído pelo professor Nélio Alves por meio da terceira edição da Semana DevSuperior, promovida pela equipe [DevSuperior](https://github.com/devsuperior).
 
-:::info
-Acesse esse projeto em https://sillashead-dsvendas.netlify.app/
-:::
-
----
+> Acesse esse projeto em https://sillashead-dsvendas.netlify.app/
 
 ## Instalação
 
