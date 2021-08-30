@@ -1,6 +1,6 @@
 # DsVendas
 
-Projeto com fins educativos, instruído pelo professor Nélio Alves por meio da terceira edição da Semana DevSuperior, promovida pela equipe [DevSuperior](https://github.com/devsuperior).
+Projeto com fins educativos, instruído pelo professor Nélio Alves por meio da terceira edição da Semana DevSuperior, promovida pela equipe [DevSuperior](https://devsuperior.com.br/).
 
 > Acesse esse projeto em https://sillashead-dsvendas.netlify.app/
 
